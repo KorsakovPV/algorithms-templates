@@ -14,20 +14,22 @@
 from typing import List, Tuple, Optional
 
 
-# def two_sum(arr: List[int], target_sum: int) -> Optional[Tuple[int, int]]:
-#     arr.sort()
-#     l=0
-#     p=1
-#     while
-#     return None
-
 def two_sum(arr: List[int], target_sum: int) -> Optional[Tuple[int, int]]:
-    for i in range(len(arr)):
-        for j in range(i + 1, len(arr)):
-            sum = arr[i] + arr[j]
-            if target_sum == sum:
-                return arr[i], arr[j]
+    helper = set()
+    for a in arr:
+        helper.add(a)
+        if target_sum - a in helper:
+            return target_sum - a, a
+
     return None
+
+# def two_sum(arr: List[int], target_sum: int) -> Optional[Tuple[int, int]]:
+#     for i in range(len(arr)):
+#         for j in range(i + 1, len(arr)):
+#             sum = arr[i] + arr[j]
+#             if target_sum == sum:
+#                 return arr[i], arr[j]
+#     return None
 
 
 def read_input() -> Tuple[List[int], int]:
