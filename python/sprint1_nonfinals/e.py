@@ -27,7 +27,7 @@
 def get_longest_word(line: str) -> str:
     longest_word = ''
 
-    for word in line:
+    for word in line.split():
         if len(longest_word) < len(word):
             longest_word = word
     return longest_word
