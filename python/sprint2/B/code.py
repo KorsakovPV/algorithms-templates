@@ -4,15 +4,16 @@
 LOCAL = False
 
 if LOCAL:
-    class Node:  
-        def __init__(self, value, next_item=None):  
-            self.value = value  
+    class Node:
+        def __init__(self, value, next_item=None):
+            self.value = value
             self.next_item = next_item
 
+
 def solution(node):
-    # Your code
-    # ヽ(´▽`)/
-    pass
+    while node:
+        print(node.value)
+        node = node.next_item
 
 def test():
     node3 = Node("node3", None)
